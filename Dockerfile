@@ -11,7 +11,8 @@ RUN apk add --no-cache bash \
                        avr-libc \
                        libelf-dev
 
-RUN mkdir /src
-WORKDIR /src
+VOLUME /src
+VOLUME /build
 
-ENTRYPOINT ["bash"]
+WORKDIR /build
+
